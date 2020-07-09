@@ -1,4 +1,4 @@
-# Définitions
+# Définitions
 
 - l'**identification** est une phase qui consiste à établir l'identité de l'utilisateur, par exemple via un login
 - l'**authentification** est une phase qui permet à l'utilisateur d'apporter la preuve de son identité, par exemple via un mot de passe (vérification de l’identité d’un utilisateur)
@@ -15,7 +15,7 @@ https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/
 - Par exemple : pour pouvoir poster un élément sur Facebook au nom de l’utilisateur (c’est-à-dire accéder à l’API de Facebook), une application doit présenter une autorisation dudit utilisateur. 
 Grâce à OAuth, l’utilisateur peut accorder une telle autorisation sans avoir à communiquer à l’application autorisée son nom d’utilisateur ou son mot de passe
 
-## Les rôles
+## Les rôles
 
 OAuth2 définit 4 rôles bien distincts :
 - le détenteur des données (**Resource Owner**) : généralement vous-même
@@ -23,13 +23,13 @@ OAuth2 définit 4 rôles bien distincts :
 - le client (**Client Application**) : une application demandant des données au serveur de ressources (cela peut être votre application PHP côté serveur, une application Javascript côté client ou une application mobile par exemple)
 - le serveur d’autorisation (**Authorization Server**) : serveur qui délivre des tokens (ou jetons) au client. Ces tokens seront utilisés lors des requêtes du client vers le serveur de ressources. Ce serveur peut être le même que le serveur de ressources (physiquement et applicativement), et c’est souvent le cas
 
-## Les tokens
+## Les tokens
 
 Les tokens sont des chaines de caractères générées par le serveur d’autorisation et sont émis lorsque le client en fait la demande
 - le token d’accès (**Access Token**) : c’est le plus important car c’est lui qui permet au serveur de ressources d’autoriser la mise à disposition des données d’un utilisateur. Ce token est envoyé par le client (l’application) en tant que paramètre ou en tant que header dans la requête vers le serveur de ressources. Il a une durée de vie limitée qui est définie par le serveur d’autorisation. Il doit rester confidentiel dès que possible (non connu du détenteur de ressources) mais on verra que ce n’est pas toujours possible, notamment lorsque c’est votre navigateur qui envoie les requêtes au serveur de ressources via Javascript
 - le token de renouvellement (**Refresh Token**) : ce token est délivré au même moment que le token d’accès mais n’est en revanche pas envoyé lors de chaque requête du client vers le serveur de ressources. Il sert simplement à être envoyé au serveur d’autorisation lorsque le token d’accès est expiré et que le client souhaite le renouveler. Pour des raisons de sécurité, il n’est pas tout le temps possible de disposer de ce token pour générer un nouveau token d’accès quand celui-ci est expiré. Nous verrons plus loin dans quels cas
 
-## Les types d’autorisation
+## Les types d’autorisation
 
 4 processus d’autorisation prédéfinis (**Grant Types**) utilisés dans différents cas d’application :
 
@@ -45,7 +45,7 @@ Les tokens sont des chaines de caractères générées par le serveur d’autori
     - principalement utilisé lorsque le client a été développé par la même autorité que celle fournissant le serveur d’autorisation
 - autorisation Client (**Client Credentials**) : ce processus d’autorisation particulièrement simple est utilisé lorsque le Client souhaite accéder à des données n’ayant pas de propriétaire ou pour lesquelles aucune autorisation n’est nécessaire
 
-## Déroulement du protocole
+## Déroulement du protocole
 
 1. Le Client demande une autorisation au Resource Owner, soit directement soit via l’Authorization Server.
 2. Le Resource Owner accorde une autorisation via un processus d’autorisation.
