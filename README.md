@@ -7,12 +7,12 @@
 
 # OAuth 2.0
 
-http://www.bubblecode.net/fr/2016/01/22/comprendre-oauth2/
-https://www.ionos.fr/digitalguide/serveur/securite/oauth/
+http://www.bubblecode.net/fr/2016/01/22/comprendre-oauth2/  
+https://www.ionos.fr/digitalguide/serveur/securite/oauth/  
 https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/
-https://nexworld.fr/securiser-api-oauth2/
+https://nexworld.fr/securiser-api-oauth2/  
 
-https://www.tutorialspoint.com/spring_boot/spring_boot_oauth2_with_jwt.htm
+https://www.tutorialspoint.com/spring_boot/spring_boot_oauth2_with_jwt.htm  
 https://www.toptal.com/spring/spring-boot-oauth2-jwt-rest-protection
 
 - OAuth, abréviation de « Open Authorization », est un protocole standard ouvert permettant à des applications tierces d’obtenir un accès limité à un service par le biais d’une autorisation préalable du détenteur des ressources
