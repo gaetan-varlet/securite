@@ -3,6 +3,11 @@
 - l'**identification** est une phase qui consiste à établir l'identité de l'utilisateur, par exemple via un login
 - l'**authentification** est une phase qui permet à l'utilisateur d'apporter la preuve de son identité, par exemple via un mot de passe (vérification de l’identité d’un utilisateur)
 - l’**autorisation** détermine les droits d’accès de la personne sur les objets (vérification des autorisations de la personne pour accéder aux ressources). L’autorisation est généralement effectuée après l’authentification
+- La **fédération d'identités** lie l'identité d'un utilisateur à travers plusieurs domaines de sécurité, chacun doté de son propre système de gestion des identités. Lorsque deux domaines sont fédérés, l'utilisateur peut s'authentifier sur un domaine, puis accéder aux ressources de l'autre domaine sans avoir à s’authentifier une seconde fois. Une composante importante de la fédération d'identité est le SSO
+- l'**authentification unique** ou Single Sign-On (**SSO**) est une technologie d’authentification unique permettant de se connecter avec un seul identifiant à de multiples applications. Une fois connecté au service de SSO (par exemple Facebook Connect), le service indique à chaque application que l’utilisateur s’avère connecté. Cela lui évite d’avoir à se connecter aux applications une par une. Le SSO moderne repose sur un contrat de confiance entre les développeurs de logiciels et les IdP (**Identity Providers** ou Fournisseurs d’Identité). **OAuth** et **SAML** sont des protocoles permettant de faire du SSO
+- le **SAML** (Security Assertion Markup Language) est un standard ouvert de fédération d’identité, basé sur XML. Il définit le processus permettant à un utilisateur d’accéder à plusieurs applications via une authentification unique
+- **OAuth2** est un standard de **délégation d’autorisation**, standard ouvert basé sur JWT (JSON Web Token). C'est un très bon outil pour sécuriser l’accès aux API d’une entreprise, mais en aucun cas un standard de fédération d’identité
+- **OpenID Connect** est une couche d’identité au-dessus du protocole OAuth 2.0, permettant, à l’instar de SAML, de réaliser une authentification fédérée. Là où OAuth 2.0 va communiquer un jeton d’accès pour accéder aux données, OpenID Connect va communiquer un jeton d’identité pour accéder aux applications.
 
 
 # OAuth 2.0
