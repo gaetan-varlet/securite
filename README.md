@@ -12,6 +12,8 @@
 
 # OAuth 2.0
 
+à lire : https://blog.octo.com/securiser-une-api-rest-tout-ce-quil-faut-savoir/
+
 http://www.bubblecode.net/fr/2016/01/22/comprendre-oauth2/  
 https://www.ionos.fr/digitalguide/serveur/securite/oauth/  
 https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/
